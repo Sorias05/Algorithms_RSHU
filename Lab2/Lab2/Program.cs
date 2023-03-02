@@ -1,9 +1,12 @@
-﻿namespace Lab2
+﻿using System.Text;
+
+namespace Lab2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             //оголошуємо граф
             Graph graph = new Graph();
             //створюємо вершини 1-8
@@ -84,6 +87,9 @@
                 foreach (int p in path) Console.Write(p + " "); //перебираємо всі вершини маршруту і виводимо їх
             }
             else { Console.Write("Шляху не існує"); }
+            Console.WriteLine();
+            //чекаємо поки користувач натисне любу клавішу на клавіатурі
+            Console.ReadKey();
         }
     }
 }
